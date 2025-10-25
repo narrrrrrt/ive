@@ -160,7 +160,7 @@ function connect() {
   ws.addEventListener("close", (event) => {
     ws = null;
     if (closeFlag) {
-      window.location.href = "/";
+      window.location.href = lang ? `index.${lang}.html` : "/";
     } else {
       retryCount++;
       if (retryCount > 3) {
