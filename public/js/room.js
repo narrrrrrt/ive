@@ -160,7 +160,7 @@ function connect() {
   ws.addEventListener("close", (event) => {
     ws = null;
     if (closeFlag) {
-      window.location.href = ['ja', 'de', 'fr', 'it', 'es'].includes(lang) ? `index.${lang}.html?m=1&v=0` : 'index.html';
+      window.location.href = ['ja','de','fr','it','es'].includes(lang?.toLowerCase()) ? `index.${lang}.html?m=1&v=0` : lang?.toLowerCase() === 'en' ? 'index.html?m=1&v=0' : 'index.html';
     } else {
       retryCount++;
       if (retryCount > 3) {
