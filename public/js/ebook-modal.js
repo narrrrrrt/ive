@@ -25,28 +25,37 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  links.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const asin = link.dataset.asin;
-      const rect = link.getBoundingClientRect();
+links.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
 
-      // 先に一度表示（位置計算用）
-      popover.style.display = 'block';
-      popover.style.visibility = 'hidden';
+    const asin = link.dataset.asin;
 
-      // 内容更新
-      grid.innerHTML = STORES.map(s =>
-        `<a href="https://${s.domain}/dp/${asin}" target="_blank">${s.code}</a>`
-      ).join('');
+    // リンクテキストの最終行の座標を取得
+    const range = document.createRange();
+    range.selectNodeContents(link);
+    const rects = range.getClientRects();
+    const lastRect = rects[rects.length - 1]; // 最終行の位置
+    range.detach();
 
-      // 吹き出しの正しい位置を中央に
-      const popWidth = popover.offsetWidth;
-      popover.style.top = `${window.scrollY + rect.bottom + 8}px`;
-      popover.style.left = `${window.scrollX + rect.left + rect.width / 2 - popWidth / 2}px`;
+    // 一時的にポップオーバーを表示してサイズを計算
+    popover.style.display = 'block';
+    popover.style.visibility = 'hidden';
 
-      // 表示
-      popover.style.visibility = 'visible';
-    });
+    grid.innerHTML = STORES.map(s =>
+      `<a href="https://${s.domain}/dp/${asin}" target="_blank">${s.code}</a>`
+    ).join('');
+
+    // bodyのオフセット補正（中央寄せ対策）
+    const bodyRect = document.body.getBoundingClientRect();
+    const centerX = lastRect.left - bodyRect.left + lastRect.width / 2;
+    const popWidth = popover.offsetWidth;
+
+    // 位置を「リンク最終行の下中央」に合わせる
+    popover.style.top = `${window.scrollY + lastRect.bottom + 8}px`;
+    popover.style.left = `${window.scrollX + bodyRect.left + centerX - popWidth / 2}px`;
+
+    popover.style.visibility = 'visible';
   });
+});
 });
