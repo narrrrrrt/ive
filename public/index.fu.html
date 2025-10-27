@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fr" id="0">
+<head>
+  <meta charset="UTF-8">
+  <title>ive.narrat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/lang-redirector.js"></script>
+</head>
+<body>
+<form>
+  <label><input type='radio' name='lang' value='en' onclick="window.location.href='index.html?m=1&v=0'">English</label>
+  <label><input type='radio' name='lang' value='de' onclick="window.location.href='index.de.html?m=1&v=0'">Deutsch</label>
+  <label><input type='radio' name='lang' value='es' onclick="window.location.href='index.es.html?m=1&v=0'">Español</label>
+  <label><input type='radio' name='lang' value='fr' checked onclick="window.location.href='index.fr.html?m=1&v=0'">Français</label>
+  <label><input type='radio' name='lang' value='it' onclick="window.location.href='index.it.html?m=1&v=0'">Italiano</label>
+  <label><input type='radio' name='lang' value='ja' onclick="window.location.href='index.ja.html?m=1&v=0'">日本語</label>
+</form>
+
+<nav>
+  <a href="#books">Livres</a>
+  <a href="#quiz">Quiz Chocolat Dragée</a>
+  <a href="#reversi">Jeu de Reversi</a>
+  <a href="#contact">Contact</a>
+</nav>
+<hr>
+<h1>Narachō Ive</h1>
+<p>Narachō Ive (né le 9 février 1970 à Musashino, Tokyo) est un écrivain japonais.</p>
+
+<section id="books">
+  <h2>Livres</h2>
+  <table>
+    <thead>
+      <tr><th>Image</th><th>Titre</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+<tr><td><img src="images/s1.png" alt="Couverture - Le Magicien d’Oz : Nouvelle Traduction" width="51" height="77" onclick="openImageModal('images/l1.jpg')"></td><td>Le Magicien d’Oz : Nouvelle Traduction</td><td>Une réinterprétation moderne du classique du domaine public <i>Le Magicien d’Oz</i>. Suivez Dorothy, l’Épouvantail et un Homme de Fer en corps d’IA dans leur voyage vers la Cité d’Émeraude. Disponible sur <a href="#" class="amazon-selector" data-asin="B0FXSK6TPZ" data-type="paperback">Amazon KDP.</a> Cliquez <a href="#" class="amazon-selector" data-asin="B0FXSC19TX" data-type="ebook">ici</a> pour la version e-book.</td></tr>
+
+<tr><td><img src="images/s2.jpeg" alt="Couverture - Les Vaches et le Réchauffement Climatique" width="51" height="76" onclick="openImageModal('images/l2.png')"></td><td>Les Vaches et le Réchauffement Climatique : La Réalité des Gaz à Effet de Serre au-delà du CO₂</td><td>Le CO₂ n’est pas le seul responsable du réchauffement climatique. Le méthane, caché dans les éructations des vaches, est un gaz à effet de serre encore plus puissant. Une fois la vérité connue, votre regard sur la table à manger changera. En cours de recherche.</td></tr>
+
+<tr><td><img src="bbb.jpg" alt="Couverture - NARATTIVE" width="50"></td><td>NARATTIVE</td><td>Actuellement en développement.</td></tr>
+
+<tr><td><img src="images/s4.jpeg" alt="Couverture - Momoko : La Routière" width="51" height="77" onclick="openImageModal('images/l4.png')"></td><td>Momoko : La Routière</td><td>Ancienne ingénieure informatique devenue conductrice de camion solitaire.  
+Ses compagnons : Jonathan, une IA en nuage, et « Ichibanboshi », son IA de navigation.  
+Dans sa cabine, où elle parle plus souvent avec des IA qu’avec des humains, de nouveaux drames se déroulent chaque jour. En préparation.</td></tr>
+
+<tr><td><img src="images/s5.png" alt="Couverture - Vive Coding : Guide du Développement d’Applications Web Cloudflare × IA" width="51" height="77" onclick="openImageModal('images/l5.png')"></td><td>Vive Coding : Guide du Développement d’Applications Web Cloudflare × IA</td><td>Un guide complet pour un nouveau style de développement d’applications web : utilisant iPad, saisie vocale, Cloudflare et IA. Pour les débutants, les développeurs nomades et ceux qui souhaitent créer des apps à la voix. En préparation.</td></tr>
+
+    </tbody>
+  </table>
+</section>
+
+<section id="quiz">
+  <h2>Collection de Quiz Chocolat Dragée</h2>
+  <div id="quiz-selector">
+    <a href="javascript:void(0)" class="quiz-link" data-index="0">1</a>
+    <a href="javascript:void(0)" class="quiz-link" data-index="1">2</a>
+    <a href="javascript:void(0)" class="quiz-link" data-index="2">3</a>
+    <a href="javascript:void(0)" class="quiz-link" data-index="3">4</a>
+    <a href="javascript:void(0)" class="quiz-link" data-index="4">5</a>
+    <a href="javascript:void(0)" class="quiz-link" data-index="5">6</a>
+    <a href="javascript:void(0)" class="quiz-link" data-index="6">7</a>
+    <a href="javascript:void(0)" class="quiz-link" data-index="7">8</a>
+    <a href="javascript:void(0)" class="quiz-link" data-index="8">9</a>
+    <a href="javascript:void(0)" class="quiz-link" data-index="9">10</a>
+    <a href="javascript:void(0)" class="quiz-link" data-index="10">11</a>
+    <a href="javascript:void(0)" class="quiz-link" data-index="11">12</a>
+  </div>
+
+  <div id="quiz-display">
+
+<!-- Quiz 1 -->
+<div class="quiz-item" data-index="0">
+  <div class="quiz-title">Quiz 1 : Trois Chocolats Dragée</div>
+  <div class="quiz-text">
+    Un sac contient 3 chocolats dragée.<br>
+    Vous en tirez un, il est rouge.<br>
+    Quelle est la probabilité qu’un autre rouge reste parmi les 2 restants ?
+  </div>
+  <div class="quiz-answer-toggle">
+    <input type="checkbox" id="answer-toggle-0" hidden>
+    <label for="answer-toggle-0" class="answer-label">📌 Afficher la réponse</label>
+    <div class="quiz-answer">
+      <p>
+        - Approche fréquentiste : <b>5/27</b><br>
+        - Approche bayésienne : <b>2/3</b><br>
+        - Avec mise à jour postérieure : <b>5/9</b>
+      </p>
+      <a href="https://chatgpt.com/g/g-68ff243d55488191975bce6b81eeb354-la-probabilite-quiz-sur-les-chocolats-en-billes" target="_blank">&lt;&lt;Voir l’explication détaillée ici&gt;&gt;</a>
+      <div class="gpts-note">Note : Essayez « Expliquez le Quiz 1 » dans « Apprendre la probabilité : Quiz Chocolat Dragée GPTs ».</div>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 2 -->
+<div class="quiz-item" data-index="1">
+  <div class="quiz-title">Quiz 2 : Cinq Chocolats Dragée</div>
+  <div class="quiz-text">
+    Un sac contient 5 chocolats dragée.<br>
+    Il y a au plus 2 rouges.<br>
+    Vous en tirez un, il est rouge.<br>
+    Quelle est la probabilité qu’un autre rouge reste parmi les 4 restants ?
+  </div>
+  <div class="quiz-answer-toggle">
+    <input type="checkbox" id="answer-toggle-1" hidden>
+    <label for="answer-toggle-1" class="answer-label">📌 Afficher la réponse</label>
+    <div class="quiz-answer">
+      <p>Calcul de mise à jour bayésienne : <b>2/3</b></p>
+      <a href="https://chatgpt.com/g/g-68ff243d55488191975bce6b81eeb354-la-probabilite-quiz-sur-les-chocolats-en-billes" target="_blank">&lt;&lt;Voir l’explication détaillée ici&gt;&gt;</a>
+      <div class="gpts-note">Note : Essayez « Expliquez le Quiz 2 » dans « Apprendre la probabilité : Quiz Chocolat Dragée GPTs ».</div>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 3 -->
+<div class="quiz-item" data-index="2">
+  <div class="quiz-title">Quiz 3 : Probabilité de même couleur</div>
+  <div class="quiz-text">
+    Un sac contient 5 chocolats dragée :<br>
+    2 rouges et 3 bleus.<br>
+    Quelle est la probabilité que 2 tirés en même temps soient de la même couleur ?
+  </div>
+  <div class="quiz-answer-toggle">
+    <input type="checkbox" id="answer-toggle-2" hidden>
+    <label for="answer-toggle-2" class="answer-label">📌 Afficher la réponse</label>
+    <div class="quiz-answer">
+      <p>
+        Rouge-Rouge : <b>1/10</b><br>
+        Bleu-Bleu : <b>3/10</b><br>
+        Total : <b>2/5</b>
+      </p>
+      <a href="https://chatgpt.com/g/g-68ff243d55488191975bce6b81eeb354-la-probabilite-quiz-sur-les-chocolats-en-billes" target="_blank">&lt;&lt;Voir l’explication détaillée ici&gt;&gt;</a>
+      <div class="gpts-note">Note : Essayez « Expliquez le Quiz 3 » dans « Apprendre la probabilité : Quiz Chocolat Dragée GPTs ».</div>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 4 -->
+<div class="quiz-item" data-index="3">
+  <div class="quiz-title">Quiz 4 : Tirer deux rouges de suite</div>
+  <div class="quiz-text">
+    Un sac contient 4 chocolats dragée :<br>
+    2 rouges et 2 bleus.<br>
+    Le premier tiré est rouge.<br>
+    Sans le remettre, quelle est la probabilité que le second soit aussi rouge ?
+  </div>
+  <div class="quiz-answer-toggle">
+    <input type="checkbox" id="answer-toggle-3" hidden>
+    <label for="answer-toggle-3" class="answer-label">📌 Afficher la réponse</label>
+    <div class="quiz-answer">
+      <p>
+        Après le premier rouge, il reste 1 rouge et 2 bleus.<br>
+        Probabilité que le second soit rouge : <b>1/3</b>
+      </p>
+      <a href="https://chatgpt.com/g/g-68ff243d55488191975bce6b81eeb354-la-probabilite-quiz-sur-les-chocolats-en-billes" target="_blank">&lt;&lt;Voir l’explication détaillée ici&gt;&gt;</a>
+      <div class="gpts-note">Note : Essayez « Expliquez le Quiz 4 » dans « Apprendre la probabilité : Quiz Chocolat Dragée GPTs ».</div>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 5 -->
+<div class="quiz-item" data-index="4">
+  <div class="quiz-title">Quiz 5 : Probabilité de même couleur (Paradoxe)</div>
+  <div class="quiz-text">
+    Une grande boîte contient 10 couleurs différentes de chocolats dragée.<br>
+    Si vous en tirez 10, quelle est la probabilité qu’au moins une paire soit de la même couleur ?
+  </div>
+  <div class="quiz-answer-toggle">
+    <input type="checkbox" id="answer-toggle-4" hidden>
+    <label for="answer-toggle-4" class="answer-label">📌 Afficher la réponse</label>
+    <div class="quiz-answer">
+      <p>
+        Probabilité que toutes les couleurs soient différentes : <b>0.00036 (≈0.036%)</b><br>
+        Donc probabilité qu’au moins une paire ait la même couleur : <b>99.96%+</b>
+      </p>
+      <a href="https://chatgpt.com/g/g-68ff243d55488191975bce6b81eeb354-la-probabilite-quiz-sur-les-chocolats-en-billes" target="_blank">&lt;&lt;Voir l’explication détaillée ici&gt;&gt;</a>
+      <div class="gpts-note">Note : Essayez « Expliquez le Quiz 5 » dans « Apprendre la probabilité : Quiz Chocolat Dragée GPTs ».</div>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 6 -->
+<div class="quiz-item" data-index="5">
+  <div class="quiz-title">Quiz 6 : Chocolats auto-reproducteurs (Simulation)</div>
+  <div class="quiz-text">
+    Un sac contient 5 rouges et 5 bleus.<br>
+    Répétez 50 fois les étapes suivantes :<br>
+    (1) Tire un au hasard et remets-le.<br>
+    (2) Ajoute un chocolat : 70% de la même couleur, 30% d’une autre.<br>
+    Quelle est la proportion finale attendue de rouges ?
+  </div>
+  <div class="quiz-answer-toggle">
+    <input type="checkbox" id="answer-toggle-5" hidden>
+    <label for="answer-toggle-5" class="answer-label">📌 Afficher la réponse</label>
+    <div class="quiz-answer">
+      <p>
+        Pas de solution analytique fermée.<br>
+        Estimation par simulation Monte Carlo.<br>
+        Procédure : départ (rouge=5, bleu=5) → 50 itérations → moyenne du rapport rouge.
+      </p>
+      <a href="https://chatgpt.com/g/g-68ff243d55488191975bce6b81eeb354-la-probabilite-quiz-sur-les-chocolats-en-billes" target="_blank">&lt;&lt;Voir l’explication détaillée ici&gt;&gt;</a>
+      <div class="gpts-note">Note : Essayez « Expliquez le Quiz 6 » dans « Apprendre la probabilité : Quiz Chocolat Dragée GPTs ».</div>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 7 -->
+<div class="quiz-item" data-index="6">
+  <div class="quiz-title">Quiz 7 : Principe des tiroirs (Pigeonhole)</div>
+  <div class="quiz-text">
+    Un sac contient 9 couleurs de chocolats dragée.<br>
+    Si vous en tirez 10, prouvez qu’au moins 2 sont de la même couleur.
+  </div>
+  <div class="quiz-answer-toggle">
+    <input type="checkbox" id="answer-toggle-6" hidden>
+    <label for="answer-toggle-6" class="answer-label">📌 Afficher la réponse</label>
+    <div class="quiz-answer">
+      <p>
+        Il n’y a que 9 couleurs mais 10 tirages → au moins une couleur se répète.<br>
+        C’est une nécessité logique : le <b>principe des tiroirs</b>.
+      </p>
+      <a href="https://chatgpt.com/g/g-68ff243d55488191975bce6b81eeb354-la-probabilite-quiz-sur-les-chocolats-en-billes" target="_blank">&lt;&lt;Voir l’explication détaillée ici&gt;&gt;</a>
+      <div class="gpts-note">Note : Essayez « Expliquez le Quiz 7 » dans « Apprendre la probabilité : Quiz Chocolat Dragée GPTs ».</div>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 8 -->
+<div class="quiz-item" data-index="7">
+  <div class="quiz-title">Quiz 8 : Paradoxe de Simpson</div>
+  <div class="quiz-text">
+    Sac A : 2 rouges, 8 bleus (20% rouges)<br>
+    Sac B : 9 rouges, 11 bleus (45% rouges)<br><br>
+    Chaque sac séparément : B a un taux de rouges plus élevé.<br>
+    Combinés : 11 rouges, 19 bleus (≈37%).<br>
+    A semble alors plus élevé. Quel est ce phénomène ?
+  </div>
+  <div class="quiz-answer-toggle">
+    <input type="checkbox" id="answer-toggle-7" hidden>
+    <label for="answer-toggle-7" class="answer-label">📌 Afficher la réponse</label>
+    <div class="quiz-answer">
+      <p>
+        C’est le <b>paradoxe de Simpson</b>.
+      </p>
+      <a href="https://chatgpt.com/g/g-68ff243d55488191975bce6b81eeb354-la-probabilite-quiz-sur-les-chocolats-en-billes" target="_blank">&lt;&lt;Voir l’explication détaillée ici&gt;&gt;</a>
+      <div class="gpts-note">Note : Essayez « Expliquez le Quiz 8 » dans « Apprendre la probabilité : Quiz Chocolat Dragée GPTs ».</div>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 9 -->
+<div class="quiz-item" data-index="8">
+  <div class="quiz-title">Quiz 9 : Monty Hall - Chocolat Dragée</div>
+  <div class="quiz-text">
+    Un sac contient 3 chocolats : 1 rouge, 2 bleus.<br>
+    Vous en choisissez un.<br>
+    L’hôte enlève un bleu.<br>
+    Devez-vous changer ? Quelle est la probabilité d’obtenir le rouge ?
+  </div>
+  <div class="quiz-answer-toggle">
+    <input type="checkbox" id="answer-toggle-8" hidden>
+    <label for="answer-toggle-8" class="answer-label">📌 Afficher la réponse</label>
+    <div class="quiz-answer">
+      <p>
+        Rester : chance de rouge = 1/3.<br>
+        Changer : chance de rouge = 2/3.<br>
+        → Il vaut mieux changer.
+      </p>
+      <a href="https://chatgpt.com/g/g-68ff243d55488191975bce6b81eeb354-la-probabilite-quiz-sur-les-chocolats-en-billes" target="_blank">&lt;&lt;Voir l’explication détaillée ici&gt;&gt;</a>
+      <div class="gpts-note">Note : Essayez « Expliquez le Quiz 9 » dans « Apprendre la probabilité : Quiz Chocolat Dragée GPTs ».</div>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 10 -->
+<div class="quiz-item" data-index="9">
+  <div class="quiz-title">Quiz 10 : Y a-t-il un autre rouge ?</div>
+  <div class="quiz-text">
+    Un sac contient un certain nombre de rouges.<br>
+    Vous en tirez un, il est rouge.<br>
+    Quelle est la probabilité qu’il en reste un autre rouge ?
+  </div>
+  <div class="quiz-answer-toggle">
+    <input type="checkbox" id="answer-toggle-9" hidden>
+    <label for="answer-toggle-9" class="answer-label">📌 Afficher la réponse</label>
+    <div class="quiz-answer">
+      <p>
+        Impossible de répondre sans hypothèses.<br>
+        Exemple : si max 2 rouges → probabilité = 2/3.<br>
+        Si nombre quelconque possible → résultat différent.<br>
+        Il faut une distribution préalable claire.
+      </p>
+      <a href="https://chatgpt.com/g/g-68ff243d55488191975bce6b81eeb354-la-probabilite-quiz-sur-les-chocolats-en-billes" target="_blank">&lt;&lt;Voir l’explication détaillée ici&gt;&gt;</a>
+      <div class="gpts-note">Note : Essayez « Expliquez le Quiz 10 » dans « Apprendre la probabilité : Quiz Chocolat Dragée GPTs ».</div>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 11 -->
+<div class="quiz-item" data-index="10">
+  <div class="quiz-title">Quiz 11 : Partager les chocolats</div>
+  <div class="quiz-text">
+    Divisez 10 chocolats équitablement entre 2 personnes.<br>
+    Combien chacun reçoit-il ?
+  </div>
+  <div class="quiz-answer-toggle">
+    <input type="checkbox" id="answer-toggle-10" hidden>
+    <label for="answer-toggle-10" class="answer-label">📌 Afficher la réponse</label>
+    <div class="quiz-answer">
+      <p>5 chacun.</p>
+      <a href="https://chatgpt.com/g/g-68ff243d55488191975bce6b81eeb354-la-probabilite-quiz-sur-les-chocolats-en-billes" target="_blank">&lt;&lt;Voir l’explication détaillée ici&gt;&gt;</a>
+      <div class="gpts-note">Note : Essayez « Expliquez le Quiz 11 » dans « Apprendre la probabilité : Quiz Chocolat Dragée GPTs ».</div>
+    </div>
+  </div>
+</div>
+
+<!-- Quiz 12 -->
+<div class="quiz-item" data-index="11">
+  <div class="quiz-title">Quiz 12 : Paradoxe des anniversaires</div>
+  <div class="quiz-text">
+    Une boîte contient 365 couleurs de chocolats.<br>
+    Si vous en tirez 23, quelle est la probabilité qu’au moins une paire partage la même couleur ?
+  </div>
+  <div class="quiz-answer-toggle">
+    <input type="checkbox" id="answer-toggle-11" hidden>
+    <label for="answer-toggle-11" class="answer-label">📌 Afficher la réponse</label>
+    <div class="quiz-answer">
+      <p>
+        Toutes différentes : ≈49.3%<br>
+        Au moins une paire : ≈<b>50.7%</b><br>
+        C’est le <b>paradoxe des anniversaires</b>.
+      </p>
+      <a href="https://chatgpt.com/g/g-68ff243d55488191975bce6b81eeb354-la-probabilite-quiz-sur-les-chocolats-en-billes" target="_blank">&lt;&lt;Voir l’explication détaillée ici&gt;&gt;</a>
+      <div class="gpts-note">Note : Essayez « Expliquez le Quiz 12 » dans « Apprendre la probabilité : Quiz Chocolat Dragée GPTs ».</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="reversi">
+  <h2>Jeu de Reversi</h2>
+    <div id="rooms">
+      <div class="room" data-id="1">
+        <h2>Salle 1</h2>
+        <button class="seat black" data-seat="black">Noir</button>
+        <button class="seat white" data-seat="white">Blanc</button>
+        <button class="seat observer" data-seat="observer">Observateur</button>
+      </div>
+      <div class="room" data-id="2">
+        <h2>Salle 2</h2>
+        <button class="seat black" data-seat="black">Noir</button>
+        <button class="seat white" data-seat="white">Blanc</button>
+        <button class="seat observer" data-seat="observer">Observateur</button>
+      </div>
+      <div class="room" data-id="3">
+        <h2>Salle 3</h2>
+        <button class="seat black" data-seat="black">Noir</button>
+        <button class="seat white" data-seat="white">Blanc</button>
+        <button class="seat observer" data-seat="observer">Observateur</button>
+      </div>
+      <div class="room" data-id="4">
+        <h2>Salle 4</h2>
+        <button class="seat black" data-seat="black">Noir</button>
+        <button class="seat white" data-seat="white">Blanc</button>
+        <button class="seat observer" data-seat="observer">Observateur</button>
+      </div>
+    </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Veuillez noter qu’il peut falloir un certain temps pour recevoir une réponse.</p>
+  <input type="checkbox" id="toggle-contact" hidden>
+  <label for="toggle-contact" class="toggle-label">📮 Formulaire de contact (Cliquez pour afficher)</label>
+  <div class="toggle-content">
+    <form id="contact-form">
+      <input type="hidden" name="lang" value="fr">
+      <table>
+        <tr><td>Nom :</td><td><input type="text" name="name" class="contact-input" required></td></tr>
+        <tr><td>Adresse e-mail :</td><td><input type="email" name="email" class="contact-input" required></td></tr>
+        <tr><td>Message :</td><td><textarea name="message" rows="8" class="contact-input" maxlength="1000" required></textarea><br><small>※ Jusqu’à 1000 caractères</small></td></tr>
+      </table>
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+</section>
+
+<div class="footer">
+  <p>© 2025 Ive NaraT. Tous droits réservés.</p>
+</div>
+
+<!-- Popover Amazon -->
+<div id="amazon-popover" class="ebook-popover">
+  <div class="ebook-popover-content">
+    <div class="popover-arrow"></div>
+    <div class="popover-header">Sélectionnez votre boutique Amazon :</div>
+    <div class="ebook-grid" id="amazon-links"></div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/lobby.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/image-modal.js"></script>
+<script src="js/ebook-modal.js"></script>
+</body>
+</html>
