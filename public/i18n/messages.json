@@ -72,11 +72,11 @@
     "ja": "ロビーへ"
   },
   "aiWillExplain": {
-    "en": "Gemini 2.5 Flash Lite will provide commentary",
-    "es": "Gemini 2.5 Flash Lite proporcionará comentarios",
-    "de": "Gemini 2.5 Flash Lite wird Kommentare geben",
-    "it": "Gemini 2.5 Flash Lite fornirà un commento",
-    "fr": "Gemini 2.5 Flash Lite fournira des explications",
-    "ja": "Gemini 2.5 Flash Liteが解説します"
+    "en": "Gemini 3.1 Flash Lite will provide commentary",
+    "es": "Gemini 3.1 Flash Lite proporcionará comentarios",
+    "de": "Gemini 3.1 Flash Lite wird Kommentare geben",
+    "it": "Gemini 3.1 Flash Lite fornirà un commento",
+    "fr": "Gemini 3.1 Flash Lite fournira des explications",
+    "ja": "Gemini 3.1 Flash Liteが解説します"
   }
 }
