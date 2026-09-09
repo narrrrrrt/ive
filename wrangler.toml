@@ -21,6 +21,7 @@ new_sqlite_classes = ["RoomDO"]
 #LASTUPDATE_TIMEOUT = "300000"  # ラストアップデート (ms)
 
 GEMINI_API_KEY = "xxxxxx"
+GITHUB_TOKEN = "xxxxxx"
 
 
 # Workers AI バインディング
